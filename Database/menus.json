@@ -1,0 +1,333 @@
+[{
+  "_id": {
+    "$oid": "66716db4e1a78e67dc8c8dc1"
+  },
+  "menu": [
+    {
+      "category": "Chaats",
+      "items": [
+        "6671545ce1a78e67dc8c8d9e",
+        "66715927e1a78e67dc8c8dad",
+        "66715999e1a78e67dc8c8dae",
+        "66715bcce1a78e67dc8c8daf",
+        "66715eb2e1a78e67dc8c8db0"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f0"
+      }
+    },
+    {
+      "category": "Main Course",
+      "items": [
+        "66716241e1a78e67dc8c8db5",
+        "667162a9e1a78e67dc8c8db6",
+        "6671630ce1a78e67dc8c8db7",
+        "6671635de1a78e67dc8c8db8",
+        "667168afe1a78e67dc8c8db9"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f1"
+      }
+    },
+    {
+      "category": "Anytime",
+      "items": [
+        {
+          "$oid": "66715f1ae1a78e67dc8c8db1"
+        },
+        {
+          "$oid": "66715fcbe1a78e67dc8c8db2"
+        },
+        {
+          "$oid": "667160ece1a78e67dc8c8db3"
+        },
+        {
+          "$oid": "6671611ee1a78e67dc8c8db4"
+        }
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f2"
+      }
+    }
+  ],
+  "restaurant": {
+    "$oid": "66716cb0e1a78e67dc8c8dbf"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66717224e1a78e67dc8c8ddd"
+  },
+  "menu": [
+    {
+      "category": "Starter",
+      "items": [
+        "6671720fe1a78e67dc8c8dd7",
+        "6671720fe1a78e67dc8c8dd8",
+        "6671720fe1a78e67dc8c8dd9"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f0"
+      }
+    },
+    {
+      "category": "Biryani",
+      "items": [
+        "6671720fe1a78e67dc8c8dda",
+        "6671720fe1a78e67dc8c8dd6",
+        "6671720fe1a78e67dc8c8dd5",
+        "6671720fe1a78e67dc8c8dd4",
+        "6671720fe1a78e67dc8c8dd3"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f1"
+      }
+    },
+    {
+      "category": "Dessert",
+      "items": [
+        "6671720fe1a78e67dc8c8ddc",
+        "6671720fe1a78e67dc8c8ddb"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f2"
+      }
+    }
+  ],
+  "restaurant": {
+    "$oid": "6671719fe1a78e67dc8c8dce"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66717445e1a78e67dc8c8de2"
+  },
+  "menu": [
+    {
+      "category": "Starter",
+      "items": [
+        "6671610ea0215dd827e9d81b",
+        "6671610ea0215dd827e9d81a",
+        "6671610ea0215dd827e9d819",
+        "6671610ea0215dd827e9d817"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f0"
+      }
+    },
+    {
+      "category": "Biryani",
+      "items": [
+        "6671610ea0215dd827e9d813",
+        "6671610ea0215dd827e9d814"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f1"
+      }
+    },
+    {
+      "category": "Gravy",
+      "items": [
+        "6671610ea0215dd827e9d815",
+        "6671610ea0215dd827e9d816",
+        "6671610ea0215dd827e9d818",
+        "6671610ea0215dd827e9d81c"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f2"
+      }
+    }
+  ],
+  "restaurant": {
+    "$oid": "667167a4a0215dd827e9d81e"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66717601e1a78e67dc8c8de6"
+  },
+  "menu": [
+    {
+      "category": "KFC Meal",
+      "items": [
+        "66716430bd4249c429fee76b",
+        "66716430bd4249c429fee76c",
+        "66716430bd4249c429fee76d",
+        "66716430bd4249c429fee76e",
+        "66716430bd4249c429fee76f",
+        "66716430bd4249c429fee770",
+        "66716430bd4249c429fee771",
+        "66716430bd4249c429fee772",
+        "66716430bd4249c429fee773",
+        "66716430bd4249c429fee774"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f0"
+      }
+    },
+    {
+      "category": "Dessert",
+      "items": [
+        "66716430bd4249c429fee775"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f1"
+      }
+    }
+  ],
+  "restaurant": {
+    "$oid": "667164e6bd4249c429fee778"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667177ade1a78e67dc8c8deb"
+  },
+  "menu": [
+    {
+      "category": "Starter",
+      "items": [
+        "667165d79850fd5166c810e5",
+        "667165d79850fd5166c810e8",
+        "667165d79850fd5166c810ea",
+        "667165d79850fd5166c810e9"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f0"
+      }
+    },
+    {
+      "category": "Main Course",
+      "items": [
+        "667165d79850fd5166c810e2",
+        "667165d79850fd5166c810e4",
+        "667165d79850fd5166c810e7",
+        "667165d79850fd5166c810e1"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f1"
+      }
+    },
+    {
+      "category": "Bread",
+      "items": [
+        "667165d79850fd5166c810e3",
+        "667165d79850fd5166c810e6"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f2"
+      }
+    }
+  ],
+  "restaurant": {
+    "$oid": "66716f8c945c5a8b80d4631e"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66717992e1a78e67dc8c8def"
+  },
+  "menu": [
+    {
+      "category": "Starter",
+      "items": [
+        "667176606b69467538f2497a",
+        "667176606b69467538f24979",
+        "667176606b69467538f24978"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f0"
+      }
+    },
+    {
+      "category": "Main Course",
+      "items": [
+        "667176606b69467538f24981",
+        "667176606b69467538f24980",
+        "667176606b69467538f2497f",
+        "667176606b69467538f2497d",
+        "667176606b69467538f2497c",
+        "667176606b69467538f2497b"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f1"
+      }
+    },
+    {
+      "category": "Bread",
+      "items": [
+        "667176606b69467538f2497e"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f2"
+      }
+    }
+  ],
+  "restaurant": {
+    "$oid": "667176756b69467538f24983"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66717b77e1a78e67dc8c8dfc"
+  },
+  "menu": [
+    {
+      "category": "Biryani Varities",
+      "items": [
+        "66717b46e1a78e67dc8c8df2",
+        "66717b46e1a78e67dc8c8df3",
+        "66717b46e1a78e67dc8c8df4",
+        "66717b46e1a78e67dc8c8df5",
+        "66717b46e1a78e67dc8c8df6",
+        "66717b46e1a78e67dc8c8df7",
+        "66717b46e1a78e67dc8c8df8",
+        "66717b46e1a78e67dc8c8df9",
+        "66717b46e1a78e67dc8c8dfa",
+        "66717b46e1a78e67dc8c8dfb"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f0"
+      }
+    }
+  ],
+  "restaurant": {
+    "$oid": "66717b16e1a78e67dc8c8df1"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66717d16e1a78e67dc8c8dff"
+  },
+  "menu": [
+    {
+      "category": "Sushi Varities",
+      "items": [
+        "667158acc45b2f6c5ad027d0",
+        "66715b14c45b2f6c5ad027da",
+        "66715b79c45b2f6c5ad027dc",
+        "66715bf6c45b2f6c5ad027de",
+        "66715c77c45b2f6c5ad027e0",
+        "66715cdbc45b2f6c5ad027e2",
+        "66715d66c45b2f6c5ad027e4",
+        "66715e69c45b2f6c5ad027e6",
+        "66715f29c45b2f6c5ad027e8",
+        "66715fa2c45b2f6c5ad027ea"
+      ],
+      "_id": {
+        "$oid": "64c241087dc1e010891100f0"
+      }
+    }
+  ],
+  "restaurant": {
+    "$oid": "667158dec45b2f6c5ad027d3"
+  },
+  "__v": 0
+}]
