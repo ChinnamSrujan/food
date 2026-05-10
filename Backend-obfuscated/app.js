@@ -9,9 +9,12 @@ const cors = require("cors");
 const errorMiddleware = require("./middlewares/errors");
 
 // CORS — allow Vercel frontend with credentials
+const frontendUrl = (process.env.FRONTEND_URL || "").replace(/"/g, "").trim();
+console.log("CORS origin set to:", frontendUrl);
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: frontendUrl,
     credentials: true,
   })
 );
