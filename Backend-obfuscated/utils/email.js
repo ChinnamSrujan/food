@@ -1,4 +1,4 @@
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 const pug = require("pug");
 const htmlToText = require("html-to-text");
 
@@ -10,20 +10,6 @@ module.exports = class Email {
     this.from = `OrderIt <${process.env.EMAIL_FROM}>`;
   }
 
-  newTransport() {
-    const port = parseInt(process.env.EMAIL_PORT);
-    return nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: port,
-      secure: port === 465,
-      auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: { rejectUnauthorized: false },
-    });
-  }
-
   async send(template, subject) {
     const html = pug.renderFile(`${__dirname}/../view/${template}.pug`, {
       firstName: this.firstName,
@@ -31,25 +17,30 @@ module.exports = class Email {
       subject,
     });
 
-    const mailOptions = {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    const { error } = await resend.emails.send({
       from: this.from,
       to: this.to,
       subject,
       html,
       text: htmlToText.convert(html),
-    };
+    });
 
-    await this.newTransport().sendMail(mailOptions);
+    if (error) {
+      console.error("Resend error:", error);
+      throw new Error(error.message);
+    }
   }
 
   async sendWelcome() {
-    await this.send("welcome", "welcome to the Order It!");
+    await this.send("welcome", "Welcome to Order It!");
   }
 
   async sendPasswordReset() {
     await this.send(
       "passwordReset",
-      "password reset token (valid for only 10 minutes)"
+      "Password reset token (valid for only 10 minutes)"
     );
   }
 };

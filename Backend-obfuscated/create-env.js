@@ -30,6 +30,7 @@ FRONTEND_URL=${process.env.FRONTEND_URL || ""}
 
 STRIPE_SECRET_KEY=${process.env.STRIPE_SECRET_KEY || ""}
 STRIPE_API_KEY=${process.env.STRIPE_API_KEY || ""}
+RESEND_API_KEY=${process.env.RESEND_API_KEY || ""}
 `;
 
   fs.writeFileSync(envPath, content);
