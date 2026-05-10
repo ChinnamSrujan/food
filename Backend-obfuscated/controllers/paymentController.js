@@ -5,7 +5,8 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 exports.processPayment = catchAsyncErrors(async (req, res, next) => {
   console.log("Payment request body:", JSON.stringify(req.body));
 
-  const { items, restaurant } = req.body;
+  const { items: rawItems, Menuitems, restaurant } = req.body;
+  const items = rawItems || Menuitems; // handle both key names
 
   console.log("Items received:", items);
   console.log("Items type:", typeof items);
