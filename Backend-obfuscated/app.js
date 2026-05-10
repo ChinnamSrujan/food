@@ -42,6 +42,7 @@ const order = require("./routes/order");
 const auth = require("./routes/auth");
 const payment = require("./routes/payment");
 const cart = require("./routes/cart");
+const test = require("./routes/test");
 
 app.use("/api/v1/eats", foodRouter);
 app.use("/api/v1/eats/menus", menuRouter);
@@ -51,6 +52,7 @@ app.use("/api/v1/users", auth);
 app.use("/api/v1", payment);
 app.use("/api/v1/coupon", coupon);
 app.use("/api/v1/eats/cart", cart);
+app.use("/api/v1", test);
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "view"));
