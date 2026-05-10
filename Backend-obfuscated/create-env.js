@@ -4,8 +4,9 @@ const path = require("path");
 
 const envPath = path.join(__dirname, "config/config.env");
 
-// Only create if it doesn't already exist (don't overwrite local dev file)
-if (!fs.existsSync(envPath)) {
+// Always overwrite config.env from environment variables (for Render deployment)
+// Only skip if running locally (NODE_ENV not set or DEVELOPMENT)
+if (!fs.existsSync(envPath) || process.env.NODE_ENV === "PRODUCTION") {
   const content = `PORT = ${process.env.PORT || 4000}
 NODE_ENV = ${process.env.NODE_ENV || "PRODUCTION"}
 

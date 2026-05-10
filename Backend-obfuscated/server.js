@@ -1,6 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
+// Run create-env.js first to generate config.env from Render env vars
+require("./create-env.js");
+
 // Load .env file only if it exists (local dev). On Render, env vars are injected directly.
 const envPath = path.join(__dirname, "config/config.env");
 if (fs.existsSync(envPath)) {
