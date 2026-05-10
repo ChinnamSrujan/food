@@ -7,6 +7,7 @@ const cloudinary = require("cloudinary");
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
 const errorMiddleware = require("./middlewares/errors");
+const fixCookies = require("./middlewares/cookieFix");
 
 // CORS — allow Vercel frontend with credentials
 const frontendUrl = (process.env.FRONTEND_URL || "").replace(/"/g, "").replace(/\/$/, "").trim();
@@ -18,6 +19,8 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(fixCookies);
 
 app.use(express.json({ limit: "30kb" }));
 app.use(bodyParser.urlencoded({ extended: true }));
