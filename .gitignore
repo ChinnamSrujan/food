@@ -1,0 +1,4 @@
+node_modules/
+Backend-obfuscated/config/config.env
+*.env
+.env
