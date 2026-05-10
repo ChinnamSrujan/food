@@ -12,6 +12,9 @@ exports.processPayment = catchAsyncErrors(async (req, res, next) => {
 
   // Strip trailing slash from FRONTEND_URL
   const frontendUrl = (process.env.FRONTEND_URL || "").replace(/\/$/, "");
+  console.log("FRONTEND_URL raw:", process.env.FRONTEND_URL);
+  console.log("frontendUrl cleaned:", frontendUrl);
+  console.log("success_url:", `${frontendUrl}/success?session_id={CHECKOUT_SESSION_ID}`);
 
   try {
     const session = await stripe.checkout.sessions.create({
