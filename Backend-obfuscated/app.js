@@ -10,7 +10,7 @@ const errorMiddleware = require("./middlewares/errors");
 const fixCookies = require("./middlewares/cookieFix");
 
 // CORS — allow Vercel frontend with credentials
-const frontendUrl = (process.env.FRONTEND_URL || "").replace(/"/g, "").replace(/\/$/, "").trim();
+const frontendUrl = (process.env.FRONTEND_URL || "").replace(/"/g, "").replace(/\r?\n/g, "").replace(/\/$/, "").trim();
 console.log("CORS origin set to:", frontendUrl);
 
 app.use(
