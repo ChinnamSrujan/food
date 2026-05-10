@@ -3,12 +3,16 @@ const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 exports.processPayment = catchAsyncErrors(async (req, res, next) => {
-  console.log("Payment request body:", req.body);
+  console.log("Payment request body:", JSON.stringify(req.body));
 
   const { items, restaurant } = req.body;
 
+  console.log("Items received:", items);
+  console.log("Items type:", typeof items);
+  console.log("Is array:", Array.isArray(items));
+
   if (!items || !Array.isArray(items) || items.length === 0) {
-    return res.status(400).json({ message: "No items provided" });
+    return res.status(400).json({ message: "No items provided", receivedBody: req.body });
   }
 
   const session = await stripe.checkout.sessions.create({
