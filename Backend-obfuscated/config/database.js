@@ -8,7 +8,6 @@ const connectDatabase = () => {
     process.exit(1);
   }
 
-  // Debug: log first 20 chars to verify URI format without exposing credentials
   console.log("Connecting to DB, URI starts with:", uri.substring(0, 20));
 
   mongoose
