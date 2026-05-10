@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./axiosConfig"; // sets axios baseURL for production
 import App from "./App";
 import { Provider } from "react-redux";
 import { transitions,positions,Provider as AlertProvider } from "react-alert";
