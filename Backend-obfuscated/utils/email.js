@@ -7,7 +7,7 @@ module.exports = class Email {
     this.to = user.email;
     this.firstName = user.name.split(" ")[0];
     this.url = url;
-    this.from = `OrderIt <${process.env.EMAIL_FROM}>`;
+    this.from = `OrderIt <onboarding@resend.dev>`;
   }
 
   async send(template, subject) {
@@ -19,18 +19,13 @@ module.exports = class Email {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const { error } = await resend.emails.send({
+    await resend.emails.send({
       from: this.from,
       to: this.to,
       subject,
       html,
       text: htmlToText.convert(html),
     });
-
-    if (error) {
-      console.error("Resend error:", error);
-      throw new Error(error.message);
-    }
   }
 
   async sendWelcome() {

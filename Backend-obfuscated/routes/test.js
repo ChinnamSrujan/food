@@ -1,27 +1,20 @@
 const express = require("express");
 const router = express.Router();
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
 router.get("/test-email", async (req, res) => {
   try {
-    console.log("EMAIL_HOST:", process.env.EMAIL_HOST);
-    console.log("EMAIL_PORT:", process.env.EMAIL_PORT);
-    console.log("EMAIL_USERNAME:", process.env.EMAIL_USERNAME);
-    console.log("EMAIL_FROM:", process.env.EMAIL_FROM);
+    console.log("RESEND_API_KEY:", process.env.RESEND_API_KEY ? "SET" : "NOT SET");
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: parseInt(process.env.EMAIL_PORT),
-      secure: parseInt(process.env.EMAIL_PORT) === 465,
-      auth: {
-        user: process.env.EMAIL_USERNAME,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: { rejectUnauthorized: false },
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const result = await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "ksrujan461@gmail.com",
+      subject: "Test Email from OrderIt",
+      html: "<p>Email is working!</p>",
     });
 
-    await transporter.verify();
-    res.json({ success: true, message: "SMTP connection verified!" });
+    res.json({ success: true, result });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
