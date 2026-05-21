@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createOrder } from "../../actions/orderAction";
 
 const OrderSuccess = () => {
@@ -8,10 +8,18 @@ const OrderSuccess = () => {
   const searchParams = new URLSearchParams(location.search);
   const session_id = searchParams.get("session_id");
   const dispatch = useDispatch();
+  const [orderCreated, setOrderCreated] = useState(false);
+
+  const { isAuthenticated, loading } = useSelector((state) => state.auth);
 
   useEffect(() => {
-    dispatch(createOrder(session_id));
-  }, [dispatch, session_id]);
+    // Wait until auth is loaded and user is authenticated
+    if (!loading && isAuthenticated && session_id && !orderCreated) {
+      dispatch(createOrder(session_id));
+      setOrderCreated(true);
+    }
+  }, [dispatch, session_id, isAuthenticated, loading, orderCreated]);
+
   return (
     <>
       <div className="row justify-content-center">
@@ -29,14 +37,13 @@ const OrderSuccess = () => {
               fill="none"
             />
             <path
-              class="checkmark__check"
+              className="checkmark__check"
               fill="none"
               d="M14.1 27.2l7.1 7.2 16.7-16.8"
             />
           </svg>
 
           <h2>Your Order has been placed successfully.</h2>
-
           <Link to="/eats/orders/me/myOrders">Go to Orders</Link>
         </div>
       </div>
