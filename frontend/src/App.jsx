@@ -42,7 +42,7 @@ export default function App() {
             <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
             <Route path="/users/me" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
             <Route path="/users/me/update" element={<ProtectedRoute><UpdateProfile /></ProtectedRoute>} />
-            <Route path="/success" element={<ProtectedRoute><OrderSuccess /></ProtectedRoute>} />
+            <Route path="/success" element={<OrderSuccess />} />
             <Route path="/eats/orders/me/myOrders" element={<ProtectedRoute><ListOrders /></ProtectedRoute>} />
             <Route path="/eats/orders/:id" element={<ProtectedRoute><OrderDetails /></ProtectedRoute>} />
 
