@@ -44,6 +44,8 @@ export const login = (email, password) => async (dispatch) => {
         config
       );
       // Save token to localStorage for cross-domain auth
+      console.log("Login response:", data);
+      console.log("Token:", data.token);
       if (data.token) localStorage.setItem("jwt_token", data.token);
       dispatch({
         type: LOGIN_SUCCESS,
