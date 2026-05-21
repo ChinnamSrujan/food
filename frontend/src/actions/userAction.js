@@ -43,6 +43,8 @@ export const login = (email, password) => async (dispatch) => {
         { email, password },
         config
       );
+      // Save token to localStorage for cross-domain auth
+      if (data.token) localStorage.setItem("jwt_token", data.token);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: data.data.user,
@@ -64,6 +66,8 @@ export const register = (userData) => async (dispatch) => {
         },
       };
       const { data } = await axios.post('/api/v1/users/signup', userData, config);
+      // Save token to localStorage for cross-domain auth
+      if (data.token) localStorage.setItem("jwt_token", data.token);
       dispatch({
         type: REGISTER_USER_SUCCESS,
         payload: data.data.user,
@@ -97,6 +101,7 @@ export const loadUser = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
     try {
       await axios.get('/api/v1/users/logout');
+      localStorage.removeItem("jwt_token"); // Clear token on logout
       dispatch({
         type: LOGOUT_SUCCESS,
       });
